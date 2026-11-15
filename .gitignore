@@ -1,0 +1,15 @@
+# Virtual environment: never commit it; anyone can rebuild it
+.venv/
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Editor and OS clutter
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Secrets (we'll need these later for the API)
+.env

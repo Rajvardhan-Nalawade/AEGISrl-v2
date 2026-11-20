@@ -4,7 +4,7 @@ from pathlib import Path
 
 from aegisrl.agents.ppo import PPOAgent
 from aegisrl.environment.vector import VectorEnv
-from aegisrl.evaluation.eval import evaluate, print_report
+from aegisrl.evaluation.evaluate import evaluate, print_report
 
 
 def main():

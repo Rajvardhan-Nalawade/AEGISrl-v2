@@ -124,9 +124,9 @@ class DQNAgent(Policy):
 
     def train(self, env, total_steps: int, learning_starts: int = 2_000, train_every: int = 2,
               eps_start: float = 1.0, eps_end: float = 0.05, explore_fraction: float = 0.5,
-              log_every: int = 20_000) -> list[float]:
+              log_every: int = 20_000, seed_offset: int = 0) -> list[float]:
         returns, episode_return, episode = [], 0.0, 0
-        obs, _ = env.reset(seed=episode)
+        obs, _ = env.reset(seed=seed_offset + episode) 
         explore_steps = int(total_steps * explore_fraction)
 
         for step in range(total_steps):
@@ -144,7 +144,7 @@ class DQNAgent(Policy):
             if terminated or truncated:
                 returns.append(episode_return)
                 episode_return, episode = 0.0, episode + 1
-                obs, _ = env.reset(seed=episode)
+                obs, _ = env.reset(seed=seed_offset + episode)
 
             if step >= learning_starts and step % train_every == 0:
                 self.learn()

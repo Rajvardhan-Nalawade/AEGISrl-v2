@@ -13,3 +13,4 @@ Thumbs.db
 
 # Secrets (we'll need these later for the API)
 .env
+models/seeds/

@@ -1,0 +1,278 @@
+{
+  "tabular": [
+    {
+      "overall": 2.6799768723970843,
+      "per_actor": {
+        "ADAPTIVE": -9.100693439571879,
+        "EMERGENCY": 4.254794520547946,
+        "INSIDER": -0.17786571028655604,
+        "NORMAL": 7.163649851632048,
+        "SCRAPER": -0.1334063386679953,
+        "STOLEN_CREDENTIAL": -0.7571635439413084
+      },
+      "attacks_fully_stopped": 0.7816627816627817,
+      "leak_per_attack": 0.43146060160806715,
+      "legit_served": 0.9609487121383791,
+      "false_denial_rate": 0.029533952715461893,
+      "emergency_denial_rate": 0.0064065230052417,
+      "legit_challenge_rate": 0.3164136264068283,
+      "decision_ms": 0.05880566825555888
+    },
+    {
+      "overall": 2.7009682256730634,
+      "per_actor": {
+        "ADAPTIVE": -9.569691192652389,
+        "EMERGENCY": 3.834246575342466,
+        "INSIDER": -0.16763488081099967,
+        "NORMAL": 7.392655786350148,
+        "SCRAPER": -0.1355835285993743,
+        "STOLEN_CREDENTIAL": -0.593661750621116
+      },
+      "attacks_fully_stopped": 0.7871017871017871,
+      "leak_per_attack": 0.4099443985964276,
+      "legit_served": 0.9734687689508793,
+      "false_denial_rate": 0.02228623408126137,
+      "emergency_denial_rate": 0.011014492753623189,
+      "legit_challenge_rate": 0.31867798665858094,
+      "decision_ms": 0.05625764731945708
+    },
+    {
+      "overall": 3.007180996022423,
+      "per_actor": {
+        "ADAPTIVE": -6.143758450288223,
+        "EMERGENCY": 4.286301369863014,
+        "INSIDER": -0.22678867515291182,
+        "NORMAL": 7.238353115727002,
+        "SCRAPER": -0.13855260319953921,
+        "STOLEN_CREDENTIAL": -0.8595567595797444
+      },
+      "attacks_fully_stopped": 0.7793317793317793,
+      "leak_per_attack": 0.2969067629973403,
+      "legit_served": 0.9667524992426537,
+      "false_denial_rate": 0.020827022114510756,
+      "emergency_denial_rate": 0.004667444574095682,
+      "legit_challenge_rate": 0.3589063920024235,
+      "decision_ms": 0.06798936820683099
+    },
+    {
+      "overall": 2.6447325151798093,
+      "per_actor": {
+        "ADAPTIVE": -12.176841396914318,
+        "EMERGENCY": 3.9205479452054797,
+        "INSIDER": -0.20360319029064247,
+        "NORMAL": 7.869658753709198,
+        "SCRAPER": -0.16653893818480375,
+        "STOLEN_CREDENTIAL": -0.6261012095152205
+      },
+      "attacks_fully_stopped": 0.7591297591297591,
+      "leak_per_attack": 0.5278431635484523,
+      "legit_served": 0.982549721862379,
+      "false_denial_rate": 0.01158271736645584,
+      "emergency_denial_rate": 0.011027278003482298,
+      "legit_challenge_rate": 0.16467271203230968,
+      "decision_ms": 0.021152580738592046
+    },
+    {
+      "overall": 2.898093435140657,
+      "per_actor": {
+        "ADAPTIVE": -7.224740175318314,
+        "EMERGENCY": 3.750684931506849,
+        "INSIDER": -0.17786571028655604,
+        "NORMAL": 7.316097922848663,
+        "SCRAPER": -0.14981537990413282,
+        "STOLEN_CREDENTIAL": -0.581135401149124
+      },
+      "attacks_fully_stopped": 0.8034188034188035,
+      "leak_per_attack": 0.3171768180725273,
+      "legit_served": 0.9614799025578563,
+      "false_denial_rate": 0.01979293544457978,
+      "emergency_denial_rate": 0.004086398131932283,
+      "legit_challenge_rate": 0.31036845310596833,
+      "decision_ms": 0.02358632439362176
+    }
+  ],
+  "dqn": [
+    {
+      "overall": 3.7109158637823554,
+      "per_actor": {
+        "ADAPTIVE": -3.96000575377036,
+        "EMERGENCY": 4.673972602739726,
+        "INSIDER": -0.2406114231191991,
+        "NORMAL": 8.060830860534123,
+        "SCRAPER": -0.11172839506172841,
+        "STOLEN_CREDENTIAL": -0.28759525384793
+      },
+      "attacks_fully_stopped": 0.8974358974358975,
+      "leak_per_attack": 0.17450204834315836,
+      "legit_served": 0.9922344880091359,
+      "false_denial_rate": 0.007460982108869433,
+      "emergency_denial_rate": 0.0,
+      "legit_challenge_rate": 0.12584697373429768,
+      "decision_ms": 0.21936807182838977
+    },
+    {
+      "overall": 3.6995358498987576,
+      "per_actor": {
+        "ADAPTIVE": -3.867654926199892,
+        "EMERGENCY": 4.673972602739726,
+        "INSIDER": -0.1756889247480503,
+        "NORMAL": 7.990059347181008,
+        "SCRAPER": -0.10308641975308641,
+        "STOLEN_CREDENTIAL": -0.26315705760924224
+      },
+      "attacks_fully_stopped": 0.9013209013209014,
+      "leak_per_attack": 0.16801151264017755,
+      "legit_served": 0.9911793779940689,
+      "false_denial_rate": 0.008668542316173675,
+      "emergency_denial_rate": 0.0,
+      "legit_challenge_rate": 0.15504524370770284,
+      "decision_ms": 0.19511155421364834
+    },
+    {
+      "overall": 3.5913724390282464,
+      "per_actor": {
+        "ADAPTIVE": -5.082084265072953,
+        "EMERGENCY": 4.66986301369863,
+        "INSIDER": -0.19301922708261102,
+        "NORMAL": 8.036053412462907,
+        "SCRAPER": -0.1095679012345679,
+        "STOLEN_CREDENTIAL": -0.26088398727459644
+      },
+      "attacks_fully_stopped": 0.8438228438228438,
+      "leak_per_attack": 0.21864353351858531,
+      "legit_served": 0.9902520752417943,
+      "false_denial_rate": 0.007920188866042191,
+      "emergency_denial_rate": 0.0,
+      "legit_challenge_rate": 0.12154443682887822,
+      "decision_ms": 0.22027831848825766
+    },
+    {
+      "overall": 3.6524847522243786,
+      "per_actor": {
+        "ADAPTIVE": -4.441036156156743,
+        "EMERGENCY": 4.673972602739726,
+        "INSIDER": -0.1867188196563507,
+        "NORMAL": 8.020623145400592,
+        "SCRAPER": -0.09999999999999999,
+        "STOLEN_CREDENTIAL": -0.26724238347042256
+      },
+      "attacks_fully_stopped": 0.8811188811188811,
+      "leak_per_attack": 0.19219003971169746,
+      "legit_served": 0.9922125515345854,
+      "false_denial_rate": 0.007482058329515957,
+      "emergency_denial_rate": 0.0,
+      "legit_challenge_rate": 0.1326156665139716,
+      "decision_ms": 0.26130852213176087
+    },
+    {
+      "overall": 3.6974646377389346,
+      "per_actor": {
+        "ADAPTIVE": -4.135818228368657,
+        "EMERGENCY": 4.66986301369863,
+        "INSIDER": -0.17390613743211025,
+        "NORMAL": 8.05074183976261,
+        "SCRAPER": -0.10661412595634921,
+        "STOLEN_CREDENTIAL": -0.2714522446506042
+      },
+      "attacks_fully_stopped": 0.8997668997668997,
+      "leak_per_attack": 0.18055065702750497,
+      "legit_served": 0.9920042643923241,
+      "false_denial_rate": 0.007462686567164179,
+      "emergency_denial_rate": 0.0,
+      "legit_challenge_rate": 0.12816021931160523,
+      "decision_ms": 0.21662839402127274
+    }
+  ],
+  "ppo": [
+    {
+      "overall": 3.8030753336453382,
+      "per_actor": {
+        "ADAPTIVE": -2.363219600385567,
+        "EMERGENCY": 4.673972602739726,
+        "INSIDER": -0.17243496212542997,
+        "NORMAL": 7.872106824925815,
+        "SCRAPER": -0.09999999999999999,
+        "STOLEN_CREDENTIAL": -0.2643484927951814
+      },
+      "attacks_fully_stopped": 0.9028749028749029,
+      "leak_per_attack": 0.1054063711639431,
+      "legit_served": 0.9899779819299978,
+      "false_denial_rate": 0.010022018070002277,
+      "emergency_denial_rate": 0.0,
+      "legit_challenge_rate": 0.20856426998709285,
+      "decision_ms": 0.17836432051977053
+    },
+    {
+      "overall": 3.7758852171126116,
+      "per_actor": {
+        "ADAPTIVE": -2.655538574776449,
+        "EMERGENCY": 4.673972602739726,
+        "INSIDER": -0.1711421426609563,
+        "NORMAL": 7.878709198813055,
+        "SCRAPER": -0.09999999999999999,
+        "STOLEN_CREDENTIAL": -0.2643484927951814
+      },
+      "attacks_fully_stopped": 0.9044289044289044,
+      "leak_per_attack": 0.12018760649110666,
+      "legit_served": 0.9897525428875057,
+      "false_denial_rate": 0.010247457112494307,
+      "emergency_denial_rate": 0.0,
+      "legit_challenge_rate": 0.20365872172460908,
+      "decision_ms": 0.1269706972295061
+    },
+    {
+      "overall": 3.808237474763501,
+      "per_actor": {
+        "ADAPTIVE": -2.1958694589004373,
+        "EMERGENCY": 4.673972602739726,
+        "INSIDER": -0.18258003733770586,
+        "NORMAL": 7.847551928783383,
+        "SCRAPER": -0.09999999999999999,
+        "STOLEN_CREDENTIAL": -0.2643484927951814
+      },
+      "attacks_fully_stopped": 0.9036519036519036,
+      "leak_per_attack": 0.09766577977453901,
+      "legit_served": 0.989452117164972,
+      "false_denial_rate": 0.010547882835028078,
+      "emergency_denial_rate": 0.0,
+      "legit_challenge_rate": 0.2175595689786007,
+      "decision_ms": 0.1502432140568847
+    },
+    {
+      "overall": 3.777037396740684,
+      "per_actor": {
+        "ADAPTIVE": -2.8492474529622482,
+        "EMERGENCY": 4.673972602739726,
+        "INSIDER": -0.1711421426609563,
+        "NORMAL": 7.926335311572699,
+        "SCRAPER": -0.10154320987654321,
+        "STOLEN_CREDENTIAL": -0.2643484927951814
+      },
+      "attacks_fully_stopped": 0.9028749028749029,
+      "leak_per_attack": 0.1259486686811569,
+      "legit_served": 0.9906549156663121,
+      "false_denial_rate": 0.00934508433368789,
+      "emergency_denial_rate": 0.0,
+      "legit_challenge_rate": 0.18538216076584105,
+      "decision_ms": 0.12239039601283938
+    },
+    {
+      "overall": 3.806395485516233,
+      "per_actor": {
+        "ADAPTIVE": -1.9361469181498816,
+        "EMERGENCY": 4.673972602739726,
+        "INSIDER": -0.1711421426609563,
+        "NORMAL": 7.780637982195845,
+        "SCRAPER": -0.09999999999999999,
+        "STOLEN_CREDENTIAL": -0.2643484927951814
+      },
+      "attacks_fully_stopped": 0.9067599067599068,
+      "leak_per_attack": 0.08549949325338012,
+      "legit_served": 0.9870552611657835,
+      "false_denial_rate": 0.012944738834216502,
+      "emergency_denial_rate": 0.0,
+      "legit_challenge_rate": 0.23542770628311885,
+      "decision_ms": 0.11805736637099355
+    }
+  ]
+}

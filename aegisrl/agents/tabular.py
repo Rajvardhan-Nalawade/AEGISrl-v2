@@ -23,13 +23,13 @@ class TabularQAgent(Policy):
         return int(self.rng.choice(best))
 
     def train(self, env, episodes: int, eps_start: float = 1.0, eps_end: float = 0.05,
-              log_every: int = 5000) -> list[float]:
+              log_every: int = 5000, seed_offset: int = 0) -> list[float]:
         returns = []
         decay_episodes = int(episodes * 0.8)
 
         for ep in range(episodes):
             epsilon = max(eps_end, eps_start - (eps_start - eps_end) * ep / decay_episodes)
-            obs, _ = env.reset(seed=ep)
+            obs, _ = env.reset(seed=seed_offset + ep)
             state = to_index(obs)
             total, done = 0.0, False
 

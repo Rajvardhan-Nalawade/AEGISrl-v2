@@ -4,7 +4,7 @@ from pathlib import Path
 
 from aegisrl.agents.dqn import DQNAgent
 from aegisrl.environment.env import HospitalSessionEnv
-from aegisrl.evaluation.eval import evaluate, print_report
+from aegisrl.evaluation.evaluate import evaluate, print_report
 
 
 def main():

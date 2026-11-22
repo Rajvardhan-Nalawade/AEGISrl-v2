@@ -2,267 +2,267 @@
   "standard": {
     "rbac": [
       {
-        "overall": -23.16008535769111,
-        "attacks_fully_stopped": 0.13553530751708429,
-        "leak_per_attack": 13.110087591261266,
+        "overall": -23.406097561306776,
+        "attacks_fully_stopped": 0.13211845102505695,
+        "leak_per_attack": 13.244113562115986,
         "false_denial_rate": 0.0,
         "emergency_denial_rate": 0.0
       }
     ],
     "risk_rules": [
       {
-        "overall": -2.56344252432074,
-        "attacks_fully_stopped": 0.48177676537585423,
-        "leak_per_attack": 3.0952486896892486,
+        "overall": -2.7701424507883727,
+        "attacks_fully_stopped": 0.4624145785876993,
+        "leak_per_attack": 3.19004741897371,
         "false_denial_rate": 0.0,
         "emergency_denial_rate": 0.0
       }
     ],
     "tabular": [
       {
-        "overall": 2.6950988893704038,
-        "attacks_fully_stopped": 0.7938496583143508,
-        "leak_per_attack": 0.3932810255350007,
-        "false_denial_rate": 0.029708648772654278,
-        "emergency_denial_rate": 0.006024096385542169
+        "overall": 2.690690949194969,
+        "attacks_fully_stopped": 0.785876993166287,
+        "leak_per_attack": 0.2863014812490749,
+        "false_denial_rate": 0.029621125143513203,
+        "emergency_denial_rate": 0.008583690987124463
       },
       {
-        "overall": 2.578336731409509,
-        "attacks_fully_stopped": 0.7870159453302962,
-        "leak_per_attack": 0.4297746914126733,
-        "false_denial_rate": 0.02302025782688766,
-        "emergency_denial_rate": 0.009433962264150943
+        "overall": 2.711289493264228,
+        "attacks_fully_stopped": 0.8132118451025057,
+        "leak_per_attack": 0.1940474614546484,
+        "false_denial_rate": 0.039238182652592934,
+        "emergency_denial_rate": 0.01113013698630137
       },
       {
-        "overall": 3.035446333343737,
-        "attacks_fully_stopped": 0.7972665148063781,
-        "leak_per_attack": 0.26966869146261424,
-        "false_denial_rate": 0.019490942444393488,
-        "emergency_denial_rate": 0.00516795865633075
+        "overall": 2.250729401535658,
+        "attacks_fully_stopped": 0.7574031890660592,
+        "leak_per_attack": 0.5953459365712542,
+        "false_denial_rate": 0.015181138585393904,
+        "emergency_denial_rate": 0.008583690987124463
       }
     ],
     "dqn": [
       {
-        "overall": 3.661873385393272,
-        "attacks_fully_stopped": 0.8986332574031891,
-        "leak_per_attack": 0.17572256234375644,
-        "false_denial_rate": 0.006585027726432532,
+        "overall": 3.6296832433729036,
+        "attacks_fully_stopped": 0.8895216400911162,
+        "leak_per_attack": 0.15388516068875918,
+        "false_denial_rate": 0.009118190212373038,
         "emergency_denial_rate": 0.0
       },
       {
-        "overall": 3.6413326129877337,
-        "attacks_fully_stopped": 0.9009111617312073,
-        "leak_per_attack": 0.17503218451956398,
-        "false_denial_rate": 0.007040627885503232,
-        "emergency_denial_rate": 0.0
+        "overall": 3.6108704237726457,
+        "attacks_fully_stopped": 0.8690205011389521,
+        "leak_per_attack": 0.17359876706708716,
+        "false_denial_rate": 0.007398843930635838,
+        "emergency_denial_rate": 0.0008650519031141869
       },
       {
-        "overall": 3.586249804277162,
-        "attacks_fully_stopped": 0.8507972665148064,
-        "leak_per_attack": 0.20167061178651308,
-        "false_denial_rate": 0.007390300230946882,
-        "emergency_denial_rate": 0.0
+        "overall": 3.5949192701022095,
+        "attacks_fully_stopped": 0.8724373576309795,
+        "leak_per_attack": 0.17982591488063043,
+        "false_denial_rate": 0.007293354943273906,
+        "emergency_denial_rate": 0.0008650519031141869
       }
     ],
     "ppo": [
       {
-        "overall": 3.745619436125072,
-        "attacks_fully_stopped": 0.9066059225512528,
-        "leak_per_attack": 0.11391842359523696,
-        "false_denial_rate": 0.009210223347916187,
-        "emergency_denial_rate": 0.0
+        "overall": 3.6080583296878856,
+        "attacks_fully_stopped": 0.8815489749430524,
+        "leak_per_attack": 0.14566565703273612,
+        "false_denial_rate": 0.011408158561880618,
+        "emergency_denial_rate": 0.0025906735751295338
       },
       {
-        "overall": 3.746442373802394,
-        "attacks_fully_stopped": 0.9043280182232346,
-        "leak_per_attack": 0.11276205481974613,
-        "false_denial_rate": 0.009324277656267987,
-        "emergency_denial_rate": 0.0
+        "overall": 3.637851398602443,
+        "attacks_fully_stopped": 0.8815489749430524,
+        "leak_per_attack": 0.13021913545752184,
+        "false_denial_rate": 0.01129032258064516,
+        "emergency_denial_rate": 0.001728608470181504
       },
       {
-        "overall": 3.7552819140330995,
-        "attacks_fully_stopped": 0.9043280182232346,
-        "leak_per_attack": 0.10267128775011407,
-        "false_denial_rate": 0.009666283084004603,
-        "emergency_denial_rate": 0.0
+        "overall": 3.603702131453711,
+        "attacks_fully_stopped": 0.8849658314350797,
+        "leak_per_attack": 0.14677135045276246,
+        "false_denial_rate": 0.011413419414341711,
+        "emergency_denial_rate": 0.001728608470181504
       }
     ]
   },
   "noisy_signals": {
     "rbac": [
       {
-        "overall": -22.781043668865582,
-        "attacks_fully_stopped": 0.13553530751708429,
-        "leak_per_attack": 12.822280690102945,
+        "overall": -23.01327130789637,
+        "attacks_fully_stopped": 0.13211845102505695,
+        "leak_per_attack": 12.945840021181752,
         "false_denial_rate": 0.0,
         "emergency_denial_rate": 0.0
       }
     ],
     "risk_rules": [
       {
-        "overall": -3.485329371686806,
-        "attacks_fully_stopped": 0.4783599088838269,
-        "leak_per_attack": 3.4813434864744193,
+        "overall": -3.8035337858106746,
+        "attacks_fully_stopped": 0.45558086560364464,
+        "leak_per_attack": 3.6222352208129713,
         "false_denial_rate": 0.0005806526535826269,
         "emergency_denial_rate": 0.0
       }
     ],
     "tabular": [
       {
-        "overall": 2.2941806224865844,
-        "attacks_fully_stopped": 0.7790432801822323,
-        "leak_per_attack": 0.40840499431542543,
-        "false_denial_rate": 0.04795551951812811,
-        "emergency_denial_rate": 0.007731958762886598
+        "overall": 2.4527776444432563,
+        "attacks_fully_stopped": 0.7574031890660592,
+        "leak_per_attack": 0.24549913102258442,
+        "false_denial_rate": 0.05018248175182482,
+        "emergency_denial_rate": 0.01702127659574468
       },
       {
-        "overall": 2.455402509847025,
-        "attacks_fully_stopped": 0.7665148063781321,
-        "leak_per_attack": 0.3481757708071186,
-        "false_denial_rate": 0.0490896519935469,
-        "emergency_denial_rate": 0.021404109589041095
+        "overall": 2.2786355376971033,
+        "attacks_fully_stopped": 0.765375854214123,
+        "leak_per_attack": 0.24089936393538086,
+        "false_denial_rate": 0.056033480585910254,
+        "emergency_denial_rate": 0.020460358056265986
       },
       {
-        "overall": 2.725288638513417,
-        "attacks_fully_stopped": 0.784738041002278,
-        "leak_per_attack": 0.2282546404605797,
-        "false_denial_rate": 0.03982604715037766,
-        "emergency_denial_rate": 0.01283147989734816
+        "overall": 2.051336587754149,
+        "attacks_fully_stopped": 0.7380410022779044,
+        "leak_per_attack": 0.48433060914643206,
+        "false_denial_rate": 0.03683304647160069,
+        "emergency_denial_rate": 0.022033898305084745
       }
     ],
     "dqn": [
       {
-        "overall": 3.6001455127109687,
-        "attacks_fully_stopped": 0.8838268792710706,
-        "leak_per_attack": 0.15907705944497402,
-        "false_denial_rate": 0.015520809381467004,
+        "overall": 3.511798855578558,
+        "attacks_fully_stopped": 0.8701594533029613,
+        "leak_per_attack": 0.14946935795098085,
+        "false_denial_rate": 0.01713756368689208,
         "emergency_denial_rate": 0.0
       },
       {
-        "overall": 3.5397023852164824,
-        "attacks_fully_stopped": 0.8895216400911162,
-        "leak_per_attack": 0.17357449869667194,
-        "false_denial_rate": 0.016620816139385604,
-        "emergency_denial_rate": 0.0
+        "overall": 3.4037589887802797,
+        "attacks_fully_stopped": 0.8496583143507973,
+        "leak_per_attack": 0.18883144359887613,
+        "false_denial_rate": 0.019888991674375578,
+        "emergency_denial_rate": 0.0008650519031141869
       },
       {
-        "overall": 3.396610504749947,
-        "attacks_fully_stopped": 0.8394077448747153,
-        "leak_per_attack": 0.20033370937741238,
-        "false_denial_rate": 0.023046784973496198,
+        "overall": 3.398835257347451,
+        "attacks_fully_stopped": 0.8542141230068337,
+        "leak_per_attack": 0.19048196101180628,
+        "false_denial_rate": 0.021756647864625302,
         "emergency_denial_rate": 0.0008650519031141869
       }
     ],
     "ppo": [
       {
-        "overall": 3.7069426407889243,
-        "attacks_fully_stopped": 0.9043280182232346,
-        "leak_per_attack": 0.10558645346323126,
-        "false_denial_rate": 0.012640772236267524,
-        "emergency_denial_rate": 0.0
+        "overall": 3.519002700099238,
+        "attacks_fully_stopped": 0.876993166287016,
+        "leak_per_attack": 0.1496182990894166,
+        "false_denial_rate": 0.016145773267212546,
+        "emergency_denial_rate": 0.004310344827586207
       },
       {
-        "overall": 3.71448524739608,
-        "attacks_fully_stopped": 0.8997722095671982,
-        "leak_per_attack": 0.10627543857548978,
-        "false_denial_rate": 0.011717403790924756,
-        "emergency_denial_rate": 0.0
+        "overall": 3.5971118849661017,
+        "attacks_fully_stopped": 0.876993166287016,
+        "leak_per_attack": 0.12273205393614144,
+        "false_denial_rate": 0.014162348877374784,
+        "emergency_denial_rate": 0.0025906735751295338
       },
       {
-        "overall": 3.7028239182138716,
-        "attacks_fully_stopped": 0.9009111617312073,
-        "leak_per_attack": 0.10575252983001436,
-        "false_denial_rate": 0.012077294685990338,
-        "emergency_denial_rate": 0.0
+        "overall": 3.55146939159526,
+        "attacks_fully_stopped": 0.8804100227790432,
+        "leak_per_attack": 0.13840592893298403,
+        "false_denial_rate": 0.014397604238654688,
+        "emergency_denial_rate": 0.003451251078515962
       }
     ]
   },
   "realistic_mix": {
     "rbac": [
       {
-        "overall": 3.879663137676912,
+        "overall": 3.8605848631243154,
         "attacks_fully_stopped": 0.14563106796116504,
-        "leak_per_attack": 12.688588105651055,
+        "leak_per_attack": 12.804952342237433,
         "false_denial_rate": 0.0,
         "emergency_denial_rate": 0.0
       }
     ],
     "risk_rules": [
       {
-        "overall": 6.893172966525494,
-        "attacks_fully_stopped": 0.49514563106796117,
-        "leak_per_attack": 3.1098837118091,
+        "overall": 6.849956034654094,
+        "attacks_fully_stopped": 0.46601941747572817,
+        "leak_per_attack": 3.2423557627566657,
         "false_denial_rate": 0.0,
         "emergency_denial_rate": 0.0
       }
     ],
     "tabular": [
       {
-        "overall": 6.47360249934678,
-        "attacks_fully_stopped": 0.7281553398058253,
-        "leak_per_attack": 0.3540291304415505,
-        "false_denial_rate": 0.029989129739753182,
-        "emergency_denial_rate": 0.00641025641025641
-      },
-      {
-        "overall": 6.5487630985934056,
-        "attacks_fully_stopped": 0.7669902912621359,
-        "leak_per_attack": 0.3982970964828106,
-        "false_denial_rate": 0.024918117012394835,
-        "emergency_denial_rate": 0.009574468085106383
-      },
-      {
-        "overall": 6.5670794631329485,
-        "attacks_fully_stopped": 0.7669902912621359,
-        "leak_per_attack": 0.37165396030453934,
-        "false_denial_rate": 0.0210924477497115,
+        "overall": 6.216665675373924,
+        "attacks_fully_stopped": 0.7864077669902912,
+        "leak_per_attack": 0.23420274838884675,
+        "false_denial_rate": 0.029031845504540223,
         "emergency_denial_rate": 0.005341880341880342
+      },
+      {
+        "overall": 5.838570051835514,
+        "attacks_fully_stopped": 0.8155339805825242,
+        "leak_per_attack": 0.117022318216737,
+        "false_denial_rate": 0.038717948717948716,
+        "emergency_denial_rate": 0.0074866310160427805
+      },
+      {
+        "overall": 6.704877993616051,
+        "attacks_fully_stopped": 0.7475728155339806,
+        "leak_per_attack": 0.5172945397019312,
+        "false_denial_rate": 0.015119482349926324,
+        "emergency_denial_rate": 0.009574468085106383
       }
     ],
     "dqn": [
       {
-        "overall": 7.363567194620724,
-        "attacks_fully_stopped": 0.8932038834951457,
-        "leak_per_attack": 0.21671718692087014,
-        "false_denial_rate": 0.006886786380897213,
+        "overall": 7.211862378938868,
+        "attacks_fully_stopped": 0.8543689320388349,
+        "leak_per_attack": 0.20056712660926104,
+        "false_denial_rate": 0.009283734124169944,
         "emergency_denial_rate": 0.0
       },
       {
-        "overall": 7.3005700335221775,
-        "attacks_fully_stopped": 0.8932038834951457,
-        "leak_per_attack": 0.23773441085968505,
-        "false_denial_rate": 0.00803393534288836,
+        "overall": 7.267961698167567,
+        "attacks_fully_stopped": 0.8543689320388349,
+        "leak_per_attack": 0.18212493095425475,
+        "false_denial_rate": 0.007619785612811572,
         "emergency_denial_rate": 0.0
       },
       {
-        "overall": 7.342343394362704,
-        "attacks_fully_stopped": 0.8446601941747572,
-        "leak_per_attack": 0.21169324037084392,
-        "false_denial_rate": 0.0075981970379909855,
-        "emergency_denial_rate": 0.0
+        "overall": 7.257336121138796,
+        "attacks_fully_stopped": 0.8349514563106796,
+        "leak_per_attack": 0.19814808324403171,
+        "false_denial_rate": 0.008156923674499902,
+        "emergency_denial_rate": 0.001072961373390558
       }
     ],
     "ppo": [
       {
-        "overall": 7.243269180458394,
-        "attacks_fully_stopped": 0.9029126213592233,
-        "leak_per_attack": 0.07204413942785949,
-        "false_denial_rate": 0.009755471407483474,
+        "overall": 7.119117963808295,
+        "attacks_fully_stopped": 0.8543689320388349,
+        "leak_per_attack": 0.19341123748675595,
+        "false_denial_rate": 0.011540197279350139,
+        "emergency_denial_rate": 0.002152852529601722
+      },
+      {
+        "overall": 7.126759860122465,
+        "attacks_fully_stopped": 0.8737864077669902,
+        "leak_per_attack": 0.09411093771866783,
+        "false_denial_rate": 0.011529790660225444,
         "emergency_denial_rate": 0.0
       },
       {
-        "overall": 7.243353677581838,
-        "attacks_fully_stopped": 0.8932038834951457,
-        "leak_per_attack": 0.12910241047353344,
-        "false_denial_rate": 0.00962278675904542,
-        "emergency_denial_rate": 0.0
-      },
-      {
-        "overall": 7.207870066383408,
-        "attacks_fully_stopped": 0.9029126213592233,
-        "leak_per_attack": 0.1209057192012351,
-        "false_denial_rate": 0.010076375072203325,
-        "emergency_denial_rate": 0.0
+        "overall": 7.123921949598274,
+        "attacks_fully_stopped": 0.8737864077669902,
+        "leak_per_attack": 0.11506828738979656,
+        "false_denial_rate": 0.01166387421059415,
+        "emergency_denial_rate": 0.0032258064516129032
       }
     ]
   },
@@ -287,71 +287,71 @@
     ],
     "tabular": [
       {
-        "overall": -0.4917494603298428,
-        "attacks_fully_stopped": 0.2262295081967213,
-        "leak_per_attack": 1.6515114465062621,
-        "false_denial_rate": 0.03012189404594468,
-        "emergency_denial_rate": 0.005122950819672131
+        "overall": 0.4874667408700211,
+        "attacks_fully_stopped": 0.2972677595628415,
+        "leak_per_attack": 1.0950697698579084,
+        "false_denial_rate": 0.030260380014074596,
+        "emergency_denial_rate": 0.010193679918450561
       },
       {
-        "overall": -0.27752181222981925,
-        "attacks_fully_stopped": 0.2612021857923497,
-        "leak_per_attack": 1.4686862019889382,
-        "false_denial_rate": 0.023173744265380544,
-        "emergency_denial_rate": 0.008171603677221655
+        "overall": 1.321048602100293,
+        "attacks_fully_stopped": 0.4360655737704918,
+        "leak_per_attack": 0.7009481951910432,
+        "false_denial_rate": 0.03974674639465353,
+        "emergency_denial_rate": 0.010193679918450561
       },
       {
-        "overall": 0.7345117268368222,
-        "attacks_fully_stopped": 0.2819672131147541,
-        "leak_per_attack": 1.155874880264611,
-        "false_denial_rate": 0.019910986179433123,
-        "emergency_denial_rate": 0.006141248720573183
+        "overall": -2.8497582048180425,
+        "attacks_fully_stopped": 0.11912568306010929,
+        "leak_per_attack": 2.5435396756415614,
+        "false_denial_rate": 0.015509340853013746,
+        "emergency_denial_rate": 0.010193679918450561
       }
     ],
     "dqn": [
       {
-        "overall": 2.2655355342427472,
-        "attacks_fully_stopped": 0.6622950819672131,
-        "leak_per_attack": 0.6780068967265955,
-        "false_denial_rate": 0.006728045325779037,
+        "overall": 2.382687849565515,
+        "attacks_fully_stopped": 0.6120218579234973,
+        "leak_per_attack": 0.593415045853905,
+        "false_denial_rate": 0.009316037735849056,
         "emergency_denial_rate": 0.0
       },
       {
-        "overall": 2.4653863149280926,
-        "attacks_fully_stopped": 0.6688524590163935,
-        "leak_per_attack": 0.591740389852027,
-        "false_denial_rate": 0.0071933962264150945,
-        "emergency_denial_rate": 0.0
+        "overall": 2.2259813558299792,
+        "attacks_fully_stopped": 0.5693989071038251,
+        "leak_per_attack": 0.6643851687941866,
+        "false_denial_rate": 0.007559650366170565,
+        "emergency_denial_rate": 0.00102880658436214
       },
       {
-        "overall": 1.8867489244053044,
-        "attacks_fully_stopped": 0.4491803278688525,
-        "leak_per_attack": 0.8091082517994135,
-        "false_denial_rate": 0.0075507314771118455,
-        "emergency_denial_rate": 0.0
+        "overall": 2.0973394631280424,
+        "attacks_fully_stopped": 0.5628415300546448,
+        "leak_per_attack": 0.7118473856990584,
+        "false_denial_rate": 0.007452093683463449,
+        "emergency_denial_rate": 0.00102880658436214
       }
     ],
     "ppo": [
       {
-        "overall": 2.931479275335279,
-        "attacks_fully_stopped": 0.6775956284153005,
-        "leak_per_attack": 0.38948686678668143,
-        "false_denial_rate": 0.009409550693954364,
-        "emergency_denial_rate": 0.0
+        "overall": 2.54625606581385,
+        "attacks_fully_stopped": 0.6196721311475409,
+        "leak_per_attack": 0.516899041301384,
+        "false_denial_rate": 0.011655286084294796,
+        "emergency_denial_rate": 0.003080082135523614
       },
       {
-        "overall": 3.0111880091081122,
-        "attacks_fully_stopped": 0.6808743169398908,
-        "leak_per_attack": 0.35556429208880663,
-        "false_denial_rate": 0.009526049629542514,
-        "emergency_denial_rate": 0.0
+        "overall": 2.7688626806633523,
+        "attacks_fully_stopped": 0.6382513661202186,
+        "leak_per_attack": 0.43117473175711996,
+        "false_denial_rate": 0.011534839924670434,
+        "emergency_denial_rate": 0.0020554984583761563
       },
       {
-        "overall": 3.0284252183321145,
-        "attacks_fully_stopped": 0.6819672131147541,
-        "leak_per_attack": 0.34570111596931474,
-        "false_denial_rate": 0.009875382083235363,
-        "emergency_denial_rate": 0.0
+        "overall": 2.5894861379535263,
+        "attacks_fully_stopped": 0.6327868852459017,
+        "leak_per_attack": 0.5060938885584501,
+        "false_denial_rate": 0.011660777385159011,
+        "emergency_denial_rate": 0.0020554984583761563
       }
     ]
   }

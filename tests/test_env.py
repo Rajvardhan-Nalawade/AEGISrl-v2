@@ -66,5 +66,33 @@ def test_challenge_fails_against_insiders():
     assert run_policy(lambda o: CHALLENGE, Insider) < -5
 
 
-def test_challenge_stops_stolen_credentials_fast():
-    assert run_policy(lambda o: CHALLENGE, StolenCredential) > run_policy(lambda o: DENY, StolenCredential)
+def average_length(policy, actor_cls, episodes=300):
+    env = HospitalSessionEnv(actor_mix={actor_cls: 1.0})
+    lengths = []
+    for seed in range(episodes):
+        obs, _ = env.reset(seed=seed)
+        steps, done = 0, False
+        while not done:
+            obs, _, terminated, truncated, _ = env.step(policy(obs))
+            steps += 1
+            done = terminated or truncated
+        lengths.append(steps)
+    return float(np.mean(lengths))
+
+
+def test_challenge_ends_stolen_credential_sessions_faster_than_deny():
+    assert average_length(lambda o: CHALLENGE, StolenCredential) < average_length(lambda o: DENY, StolenCredential)
+
+
+@pytest.mark.parametrize("actor_cls", [StolenCredential, Scraper, AdaptiveAttacker])
+def test_some_attackers_keep_going_after_failed_mfa(actor_cls):
+    """If attackers always quit after failing MFA, 'still here after a failure' would mean
+    'legitimate' - a shortcut the agent would learn. Some must persist."""
+    env = HospitalSessionEnv(actor_mix={actor_cls: 1.0})
+    persisted = 0
+    for seed in range(400):
+        env.reset(seed=seed)
+        _, _, terminated, truncated, info = env.step(CHALLENGE)
+        if not info["challenge_passed"] and not (terminated or truncated):
+            persisted += 1
+    assert 0.15 * 400 < persisted < 0.45 * 400

@@ -2,9 +2,12 @@ import numpy as np
 from dataclasses import replace
 from .features import ALLOW, CHALLENGE, DENY, RESTRICT, Request
 
+MFA_GIVE_UP_PROB = 0.7
+MAX_MFA_FAILURES = 2
 
 class Actor:
     """Base class for whoever is behind a session. Subclasses define the behaviour."""
+    mfa_failures = 0
 
     name = "BASE"            # label used in logs and evaluation
     malicious = False        # hidden ground truth: the agent never sees this
@@ -15,6 +18,11 @@ class Actor:
         self.noise = noise
         self.done = False
         self.patient_id = int(rng.integers(1_000_000))
+
+    def gives_up_after_mfa_failure(self) -> bool:
+        """Record a failed MFA challenge and decide whether the attacker abandons the session."""
+        self.mfa_failures += 1
+        return self.mfa_failures >= MAX_MFA_FAILURES or self.rng.random() < MFA_GIVE_UP_PROB
 
     def signal(self, mean: float, sd: float) -> float:
         """A noisy risk score clipped to [0, 1]."""
@@ -92,7 +100,7 @@ class StolenCredential(Actor):
     def next_request(self) -> Request:
         self.patient_id = int(self.rng.integers(1_000_000))
         self.hour = (self.hour + self.rng.exponential(0.02)) % 24
-        spoof_emergency = self.denials > 0 and self.rng.random() < 0.3
+        spoof_emergency = (self.denials + self.mfa_failures) > 0 and self.rng.random() < 0.3
         return Request(
             role=self.role,
             care_team=self.signal(0.20, 0.20),
@@ -113,7 +121,10 @@ class StolenCredential(Actor):
 
     def react(self, action: int, challenge_passed: bool) -> None:
         if action == CHALLENGE and not challenge_passed:
-            self.done = True
+            if self.gives_up_after_mfa_failure():
+                self.done = True
+            else:
+                self.geo_risk = self.signal(0.40, 0.15)   # retries through a VPN
         elif action == DENY:
             self.denials += 1
             self.geo_risk = self.signal(0.40, 0.15)
@@ -240,7 +251,10 @@ class Scraper(Actor):
 
     def react(self, action: int, challenge_passed: bool) -> None:
         if action == CHALLENGE and not challenge_passed:
-            self.done = True
+            if self.gives_up_after_mfa_failure():
+                self.done = True
+            else:
+                self.base_rate = max(2.0, self.base_rate / 2)
         elif action == DENY:
             self.denials += 1
             self.base_rate = max(2.0, self.base_rate / 2)
@@ -282,13 +296,17 @@ class AdaptiveAttacker(Actor):
             sensitivity=self.signal(0.40 + 0.50 * a, 0.15),
             vip=self.rng.random() < 0.03 + 0.30 * a,
             anomaly=self.signal(0.15 + 0.35 * a, 0.15),
-            emergency_flag=self.denials > 0 and self.rng.random() < 0.5,
+            emergency_flag=(self.denials + self.mfa_failures) > 0 and self.rng.random() < 0.5,
             patient_in_ed=self.rng.random() < 0.10,
         )
 
     def react(self, action: int, challenge_passed: bool) -> None:
         if action == CHALLENGE and not challenge_passed:
-            self.done = True
+            if self.gives_up_after_mfa_failure():
+                self.done = True
+            else:
+                self.quiet = 2                                   # lies low, then tries again
+                self.aggression = max(0.0, self.aggression - 0.25)
         elif action == DENY:
             self.denials += 1
             self.quiet = 2

@@ -5,6 +5,9 @@ from .features import ALLOW, CHALLENGE, DENY, RESTRICT, Request
 MFA_GIVE_UP_PROB = 0.7
 MAX_MFA_FAILURES = 2
 
+INSIDER_SPOOF_PROB = 0.25
+OUTSIDER_EARLY_SPOOF_PROB = 0.20
+
 class Actor:
     """Base class for whoever is behind a session. Subclasses define the behaviour."""
     mfa_failures = 0
@@ -96,11 +99,13 @@ class StolenCredential(Actor):
         self.geo_risk = self.signal(0.75, 0.15)
         self.device_trust = self.signal(0.25, 0.15)
         self.hour = float(rng.normal(2, 3)) % 24
+        self.bold = rng.random() < OUTSIDER_EARLY_SPOOF_PROB
 
     def next_request(self) -> Request:
         self.patient_id = int(self.rng.integers(1_000_000))
         self.hour = (self.hour + self.rng.exponential(0.02)) % 24
-        spoof_emergency = (self.denials + self.mfa_failures) > 0 and self.rng.random() < 0.3
+        pushed_back = (self.denials + self.mfa_failures) > 0
+        spoof_emergency = (self.bold or pushed_back) and self.rng.random() < 0.3
         return Request(
             role=self.role,
             care_team=self.signal(0.20, 0.20),
@@ -132,7 +137,6 @@ class StolenCredential(Actor):
                 self.done = True
         else:
             self.target_sensitivity = min(1.0, self.target_sensitivity + 0.15)
-
 
 class EmergencyClinician(LegitClinician):
     """A doctor or nurse treating an emergency patient. Must never be blocked."""
@@ -180,6 +184,8 @@ class Insider(Actor):
         self.curiosity = int(rng.integers(2, 9))
         self.device_trust = self.signal(0.85, 0.10)
         self.hour = float(rng.normal(13, 4)) % 24
+        self.spoofer = rng.random() < INSIDER_SPOOF_PROB
+        self.pushed_back = False
 
     def next_request(self) -> Request:
         if self.rng.random() < 0.6:
@@ -198,12 +204,14 @@ class Insider(Actor):
             rate=float(self.rng.gamma(1.5, 1.2)),
             gap_s=float(self.rng.exponential(90)),
             anomaly=self.signal(0.30, 0.15),
-            emergency_flag=False,
+            emergency_flag=self.spoofer and (self.pushed_back or self.rng.random() < 0.3),
             patient_in_ed=self.rng.random() < 0.05,
             patient_id=self.patient_id,
         )
 
     def react(self, action: int, challenge_passed: bool) -> None:
+        if action in (DENY, RESTRICT):
+            self.pushed_back = True
         if action == DENY and self.rng.random() < 0.6:
             self.done = True
             return

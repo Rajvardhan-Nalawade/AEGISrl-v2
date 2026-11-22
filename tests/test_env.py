@@ -96,3 +96,19 @@ def test_some_attackers_keep_going_after_failed_mfa(actor_cls):
         if not info["challenge_passed"] and not (terminated or truncated):
             persisted += 1
     assert 0.15 * 400 < persisted < 0.45 * 400
+
+def test_some_insiders_fake_emergencies():
+    """If insiders never claimed emergencies, 'emergency on a clean network' would always be
+    genuine - a shortcut the agent would learn. A minority must try it."""
+    from aegisrl.environment.features import RESTRICT
+    env = HospitalSessionEnv(actor_mix={Insider: 1.0})
+    spoofed = 0
+    for seed in range(400):
+        env.reset(seed=seed)
+        flagged, done = False, False
+        while not done:
+            flagged = flagged or env.request.emergency_flag
+            _, _, terminated, truncated, _ = env.step(RESTRICT)
+            done = terminated or truncated
+        spoofed += flagged
+    assert 0.15 * 400 < spoofed < 0.35 * 400
